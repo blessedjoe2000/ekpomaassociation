@@ -1,6 +1,8 @@
 "use client";
 
 import { Box } from "@mui/system";
+import { easeInOut, motion } from "framer-motion";
+import { useState } from "react";
 import imageOne from "../../public/images/carousal/eahimage1.jpg";
 import imageTwo from "../../public/images/carousal/eahimage2.jpg";
 import imageThree from "../../public/images/carousal/eahimage3.jpg";
@@ -23,57 +25,157 @@ import {
   CarousalThirdImage,
   CarousalTitleContainer,
 } from "./styles";
+import Link from "next/link";
 
 export default function Carousal() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [transitionDirection, setTransitionDirection] = useState("next");
+
+  const handleNextClick = () => {
+    setTransitionDirection("next");
+    setActiveIndex((prevIndex) =>
+      prevIndex === 2 ? prevIndex : prevIndex + 1
+    );
+  };
+
+  const handlePreviousClick = () => {
+    setTransitionDirection("previous");
+    setActiveIndex((prevIndex) =>
+      prevIndex === 0 ? prevIndex : prevIndex - 1
+    );
+  };
+
+  const carousalContent = [
+    {
+      title: "We Are Closer to You Than You Think",
+      description:
+        "The Esan West community is an active and vibrant part of society, committed to fostering unity and promoting our shared heritage. We are more than just neighbors; we are a family that values support, culture, and togetherness. Wherever you find yourself, you are never far from an Esan brother or sister.",
+      link: "/",
+    },
+    {
+      title: "Honoring an Icon: Ambrose Alli",
+      description:
+        "Prof. Ambrose Alli, a revered son of Esan West, was a trailblazing leader and the first civilian governor of the old Bendel State. His tireless efforts in expanding access to education, healthcare, and infrastructure have left an indelible mark on our history. We proudly carry on his legacy by advocating for progress and excellence.",
+      link: "/",
+    },
+    {
+      title: "Celebrating Esan Tradition and Culture",
+      description:
+        "Our traditions define us, and we take pride in preserving the rich culture of Esan. From colorful festivals like the Ihuan and Ekaba to our unique language and storytelling, we are dedicated to keeping our heritage alive. Through our gatherings, we ensure that the beauty of Esan culture thrives, connecting past, present, and future generations.",
+      link: "/",
+    },
+  ];
+
+  const textVariants = {
+    hidden: {
+      opacity: 0,
+      x: transitionDirection === "next" ? 100 : -100,
+      transition: { duration: "0.5", ease: "easeInOut" },
+    },
+
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: "0.5", ease: "easeInOut" },
+    },
+  };
+
+  const textContainerVariant = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.1 } },
+  };
   return (
     <CarousalContainer>
-      <CarousalContentContainer>
+      <motion.div
+        className="carousalContentContainer"
+        key={activeIndex}
+        variants={textContainerVariant}
+        initial="hidden"
+        animate="visible"
+      >
         <CarousalTitleContainer>
-          <Box>This will be the heading</Box>
+          <motion.h1 variants={textVariants}>
+            {carousalContent[activeIndex].title}
+          </motion.h1>
         </CarousalTitleContainer>
         <CarousalParagraph>
-          <Box>This will take the message</Box>
+          <motion.p variants={textVariants}>
+            {carousalContent[activeIndex].description}
+          </motion.p>
         </CarousalParagraph>
-        <CarousalButton>
-          <Box>Learn More</Box>
-        </CarousalButton>
-      </CarousalContentContainer>
+        <Link href={`${carousalContent[activeIndex].link}`}>
+          <CarousalButton>Learn More</CarousalButton>
+        </Link>
+      </motion.div>
       <CarousalImagesContainer>
-        <CarousalFirstImage>
+        <motion.div
+          className="carousal-first-img"
+          animate={{
+            opacity: activeIndex === 0 ? 1 : 0,
+            x: activeIndex === 0 ? "0px" : "96px",
+            scale: activeIndex === 0 ? 1 : 1.2,
+          }}
+          transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+        >
           <Image className="firstImg" src={imageOne} alt="men wearing igbulu" />
-        </CarousalFirstImage>
-        <CarousalSecondImage>
-          <Image
-            className="secondImg"
-            src={imageTwo}
-            alt="Ambrose Alli"
-            width={300}
-          />
-        </CarousalSecondImage>
-        <CarousalThirdImage>
+        </motion.div>
+        <motion.div
+          className="carousal-second-img"
+          animate={{
+            opacity: activeIndex === 0 ? 0.66 : activeIndex === 1 ? 1 : 0,
+            x: activeIndex === 0 ? "-96px" : activeIndex === 1 ? "0px" : "96px",
+            scale: activeIndex === 0 ? 0.8 : activeIndex === 1 ? 1 : 1.2,
+          }}
+          transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+        >
+          <Image className="secondImg" src={imageTwo} alt="Ambrose Alli" />
+        </motion.div>
+        <motion.div
+          className="carousal-third-img"
+          animate={{
+            opacity: activeIndex === 0 ? 0.33 : activeIndex === 1 ? 0.66 : 1,
+            x: activeIndex === 0 ? "-192px" : activeIndex === 1 ? "-96px" : 0,
+            scale: activeIndex === 0 ? 0.6 : activeIndex === 1 ? 0.8 : 1,
+          }}
+          transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
+        >
           <Image
             className="thirdImg"
             src={imageThree}
             alt="traditional beads"
-            width={300}
           />
-        </CarousalThirdImage>
+        </motion.div>
         <CarousalControls>
-          <CarousalPrevButton>
-            <Image src={prevDisabled} alt="previous button" width={20} />
-          </CarousalPrevButton>
-          <CarousalNextButton>
-            <ArrowForwardIcon
-              sx={{
-                color: "#FFF4B7",
-                fontSize: "3rem",
-                transition: "color 0.15s ease",
-                "&:hover": {
-                  color: "#118B50",
-                },
-              }}
-            />
-          </CarousalNextButton>
+          <div onClick={handlePreviousClick}>
+            {activeIndex === 0 ? (
+              <Image src={prevDisabled} alt="previous button" width={30} className="disabled-img"/>
+            ) : (
+              <CarousalPrevButton>
+                <ArrowBackIcon
+                  sx={{
+                    color: "#FFF4B7",
+                    fontSize: "3rem",
+                    transition: "color 0.15s ease",
+                  }}
+                />
+              </CarousalPrevButton>
+            )}
+          </div>
+          <div onClick={handleNextClick}>
+            {activeIndex === 2 ? (
+              <Image src={nextDisabled} alt="previous button" width={30} className="disabled-img"/>
+            ) : (
+              <CarousalNextButton>
+                <ArrowForwardIcon
+                  sx={{
+                    color: "#FFF4B7",
+                    fontSize: "3rem",
+                    transition: "color 0.15s ease",
+                  }}
+                />
+              </CarousalNextButton>
+            )}
+          </div>
         </CarousalControls>
       </CarousalImagesContainer>
     </CarousalContainer>

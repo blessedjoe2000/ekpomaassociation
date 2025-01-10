@@ -1,17 +1,22 @@
 import { Button } from "@mui/material";
 import { Box, styled } from "@mui/system";
+
 export const CarousalContainer = styled(Box)`
   background-color: #1b1833;
   color: #fff;
-  padding: 2rem;
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 50% 50%;
   grid-template-rows: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10vw;
+  gap: 20px;
+  padding: 0 10vw 5rem 10vw;
 
   @media (max-width: 768px) {
+    grid-template-columns: 100%;
+    grid-template-rows: 1fr 1fr;
+    padding: 0 5vw 5rem 5vw;
+    height: 100vh;
   }
 `;
 
@@ -21,19 +26,24 @@ export const CarousalContentContainer = styled(Box)`
 `;
 
 export const CarousalTitleContainer = styled(Box)`
-  font-size: 3.5rem;
+  font-size: 2rem;
   font-weight: 500;
 
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 1.2rem;
   }
 `;
 
-export const CarousalParagraph = styled(Box)({
-  fontSize: "1.2rem",
-  fontWeight: "200",
-  padding: "2rem 0",
-});
+export const CarousalParagraph = styled(Box)`
+  font-size: 1.2rem;
+  font-weight: 200;
+  padding: 2rem 0;
+  color: #bcccdc;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+`;
 
 export const CarousalButton = styled(Button)({
   display: "flex",
@@ -63,41 +73,25 @@ export const CarousalImagesContainer = styled(Box)`
   }
 `;
 
-export const CarousalFirstImage = styled(Box)`
-  z-index: 2;
-  width: 22rem;
-  height: auto;
-  position: absolute;
-`;
-export const CarousalSecondImage = styled(Box)`
-  z-index: 1;
-  width: 22rem;
-  height: auto;
-  position: absolute;
-`;
-export const CarousalThirdImage = styled(Box)`
-  z-index: 0;
-  width: 22rem;
-  height: auto;
-  position: absolute;
-`;
 export const CarousalControls = styled(Box)`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
   position: absolute;
   z-index: 3;
   left: 0;
   bottom: 0;
+  transform: translateY(3rem);
   @media (max-width: 768px) {
   }
 `;
 export const CarousalPrevButton = styled(Button)`
   border-radius: 100%;
   padding: 5px;
-  border: 1px solid #fff4b7;
-
+  border: 1px solid transparent;
   &:hover {
-    border: 1px solid #118b50;
+    border: 1px solid #fff4b7;
   }
 
   @media (max-width: 768px) {
@@ -106,11 +100,11 @@ export const CarousalPrevButton = styled(Button)`
 export const CarousalNextButton = styled(Button)`
   border-radius: 100%;
   padding: 5px;
-  border: 1px solid #fff4b7;
+  border: 1px solid transparent;
   transition: "background-color 0.15s ease, color 0.15s ease";
 
   &:hover {
-    border: 1px solid #118b50;
+    border: 1px solid #fff4b7;
   }
   @media (max-width: 768px) {
   }

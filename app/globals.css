@@ -8,6 +8,14 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -20,11 +28,34 @@ a {
   text-decoration: none;
 }
 
+.carousal-first-img {
+  z-index: 2;
+  width: 20rem;
+  height: auto;
+  position: absolute;
+}
+.carousal-second-img {
+  z-index: 1;
+  width: 20rem;
+  height: auto;
+  position: absolute;
+}
+.carousal-third-img {
+  z-index: 0;
+  width: 20rem;
+  height: auto;
+  position: absolute;
+}
+
 .firstImg,
 .secondImg,
 .thirdImg {
   border-radius: 1.5rem;
-  border: 1px solid #fff4b7;
-  width: 22rem;
+  border: 2px solid #fff4b7;
+  width: 20rem;
   height: auto;
+}
+
+.disabled-img {
+  margin: 5px 20px 5px 5px;
 }
