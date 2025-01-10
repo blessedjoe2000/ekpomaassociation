@@ -1,5 +1,11 @@
+@import url("@fontsource/roboto/300.css");
+@import url("@fontsource/roboto/400.css");
+@import url("@fontsource/roboto/500.css");
+@import url("@fontsource/roboto/700.css");
+
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -12,4 +18,13 @@ nav {
 
 a {
   text-decoration: none;
+}
+
+.firstImg,
+.secondImg,
+.thirdImg {
+  border-radius: 1.5rem;
+  border: 1px solid #fff4b7;
+  width: 22rem;
+  height: auto;
 }

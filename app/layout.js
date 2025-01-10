@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import Script from "next/script";
 
 export const metadata = {
   title: "Ekpoma Association of Houston",
