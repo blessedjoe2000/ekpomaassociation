@@ -135,3 +135,28 @@ a {
     width: 10rem;
   }
 }
+
+.brief {
+  background-image: url(../public/images/eahgradient.jpg);
+}
+
+.welcome-img {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .welcome-img {
+    border-radius: 10px;
+  }
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}

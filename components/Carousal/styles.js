@@ -14,25 +14,31 @@ export const CarousalContainer = styled(Box)`
   margin-top: 7rem;
 
   @media (max-width: 1060px) {
-    padding: 0 5vw 5rem 5vw;
+    padding: 0rem 5vw 5rem 5vw;
   }
   @media (max-width: 768px) {
     grid-template-columns: 100%;
     grid-template-rows: 1fr 1fr;
-    padding: 0 10vw 5rem 10vw;
+    padding: 0rem 10vw 5rem 10vw;
     height: 100vh;
   }
   @media (max-width: 545px) {
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
     padding: 3rem 5vw 15rem 5vw;
-    height: 100vh;
   }
   @media (max-width: 528px) {
-    grid-template-columns: 100%;
-    grid-template-rows: 1fr 1fr;
-    padding: 0 5vw 5rem 5vw;
-    height: 100vh;
+    padding: 2rem 5vw 5rem 5vw;
+  }
+  @media (max-width: 408px) {
+    padding: 2rem 5vw 8rem 5vw;
+  }
+  @media (max-width: 378px) {
+    padding: 2rem 5vw 18rem 5vw;
+  }
+  @media (max-width: 362px) {
+    padding: 2rem 5vw 14rem 5vw;
+  }
+  @media (max-width: 348px) {
+    padding: 2rem 5vw 7rem 5vw;
   }
 `;
 
@@ -46,9 +52,6 @@ export const CarousalTitleContainer = styled(Box)`
   font-weight: 500;
 
   @media (max-width: 1060px) {
-    font-size: 1.2rem;
-  }
-  @media (max-width: 768px) {
     font-size: 1.2rem;
   }
 
