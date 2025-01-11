@@ -64,13 +64,74 @@ a {
   margin: 5px 5px 5px 20px;
 }
 
-/* @media (max-width: 768px) {
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #b59f78;
-    padding: 5px;
+@media (max-width: 1060px) {
+  .carousal-first-img,
+  .carousal-second-img,
+  .carousal-third-img,
+  .firstImg,
+  .secondImg,
+  .thirdImg {
+    width: 18rem;
   }
-} */
+}
+@media (max-width: 860px) {
+  .carousal-first-img,
+  .carousal-second-img,
+  .carousal-third-img,
+  .firstImg,
+  .secondImg,
+  .thirdImg {
+    width: 14rem;
+  }
+}
+@media (max-width: 768px) {
+  .carousal-first-img,
+  .carousal-second-img,
+  .carousal-third-img,
+  .firstImg,
+  .secondImg,
+  .thirdImg {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 545px) {
+  .carousal-first-img,
+  .carousal-second-img,
+  .carousal-third-img,
+  .firstImg,
+  .secondImg,
+  .thirdImg {
+    width: 16rem;
+  }
+}
+@media (max-width: 528px) {
+  .carousal-first-img,
+  .carousal-second-img,
+  .carousal-third-img,
+  .firstImg,
+  .secondImg,
+  .thirdImg {
+    width: 14rem;
+  }
+}
+@media (max-width: 405px) {
+  .carousal-first-img,
+  .carousal-second-img,
+  .carousal-third-img,
+  .firstImg,
+  .secondImg,
+  .thirdImg {
+    width: 12rem;
+  }
+}
+@media (max-width: 370px) {
+  .carousal-first-img,
+  .carousal-second-img,
+  .carousal-third-img,
+  .firstImg,
+  .secondImg,
+  .thirdImg {
+    width: 10rem;
+  }
+}

@@ -89,7 +89,7 @@ export default function Navbar() {
             position: "fixed",
             width: "100%",
             top: 0,
-            zIndex: 1000,
+            zIndex: 500,
             padding: "5px",
           }}
         >
