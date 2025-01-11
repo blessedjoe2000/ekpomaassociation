@@ -71,6 +71,9 @@ export default function Navbar() {
               <MenuButton variant="outlined">Culture</MenuButton>
             </Link>
             <Link href="/">
+              <MenuButton variant="outlined">Gallery</MenuButton>
+            </Link>
+            <Link href="/">
               <MenuButton variant="outlined">Contact</MenuButton>
             </Link>
           </Stack>
@@ -154,6 +157,9 @@ export default function Navbar() {
                 </Link>
                 <Link href="/" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">Culture</MenuButton>
+                </Link>
+                <Link href="/" onClick={handleDrawerClose}>
+                  <MenuButton variant="outlined">Gallery</MenuButton>
                 </Link>
                 <Link href="/" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">Contact</MenuButton>

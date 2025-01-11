@@ -5,6 +5,7 @@ export const BriefHeading = styled(Box)`
   font-size: 2.5rem;
   text-align: center;
   padding-top: 2rem;
+  color: #118b50;
 
   @media (max-width: 1060px) {
     font-size: 2rem;

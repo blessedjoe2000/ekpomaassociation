@@ -7,9 +7,12 @@ import slier2 from "../../public/images/eahslider2.jpg";
 import slier3 from "../../public/images/eahslider3.jpg";
 
 import Image from "next/image";
-import { BriefHeading } from "../BriefAbout/styles";
 import { Button } from "@mui/material";
-import { PhotoSilderContainer } from "./styles";
+import {
+  PhotoSilderButton,
+  PhotoSilderContainer,
+  PhotoSilderHeading,
+} from "./styles";
 
 export default function PhotoSlider() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -17,9 +20,9 @@ export default function PhotoSlider() {
   ]);
   return (
     <PhotoSilderContainer>
-      <PhotoSilderContainer>
-        <h3>Photo Speaks Louder</h3>
-      </PhotoSilderContainer>
+      <PhotoSilderHeading>
+        <h3>Photos Speak Louder</h3>
+      </PhotoSilderHeading>
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
           <div className="embla__slide">
@@ -45,7 +48,7 @@ export default function PhotoSlider() {
           </div>
         </div>
       </div>
-      <Button>View more</Button>
+      <PhotoSilderButton>View more</PhotoSilderButton>
     </PhotoSilderContainer>
   );
 }
