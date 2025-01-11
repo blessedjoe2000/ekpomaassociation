@@ -6,7 +6,6 @@ export default function Home() {
   return (
     <div>
       <Divider />
-      {/* <Banner /> */}
       <Carousal />
     </div>
   );

@@ -1,7 +1,6 @@
 "use client";
 
-import { Box } from "@mui/system";
-import { easeInOut, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 import imageOne from "../../public/images/carousal/eahimage1.jpg";
 import imageTwo from "../../public/images/carousal/eahimage2.jpg";
@@ -14,15 +13,11 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import {
   CarousalButton,
   CarousalContainer,
-  CarousalContentContainer,
   CarousalControls,
-  CarousalFirstImage,
   CarousalImagesContainer,
   CarousalNextButton,
   CarousalParagraph,
   CarousalPrevButton,
-  CarousalSecondImage,
-  CarousalThirdImage,
   CarousalTitleContainer,
 } from "./styles";
 import Link from "next/link";
@@ -61,7 +56,7 @@ export default function Carousal() {
     {
       title: "Celebrating Esan Tradition and Culture",
       description:
-        "Our traditions define us, and we take pride in preserving the rich culture of Esan. From colorful festivals like the Ihuan and Ekaba to our unique language and storytelling, we are dedicated to keeping our heritage alive. Through our gatherings, we ensure that the beauty of Esan culture thrives, connecting past, present, and future generations.",
+        "Our traditions define us, and we take pride in preserving the rich culture of Esan. From our colorful festivals to our unique language and storytelling, we are dedicated to keeping our heritage alive. Through our gatherings, we ensure that the beauty of Esan culture thrives, connecting past, present, and future generations.",
       link: "/",
     },
   ];
@@ -104,12 +99,15 @@ export default function Carousal() {
           </motion.p>
         </CarousalParagraph>
         <Link href={`${carousalContent[activeIndex].link}`}>
-          <CarousalButton>Learn More</CarousalButton>
+          <motion.div variants={textVariants}>
+            <CarousalButton>Learn More</CarousalButton>
+          </motion.div>
         </Link>
       </motion.div>
       <CarousalImagesContainer>
         <motion.div
           className="carousal-first-img"
+          initial={{ opacity: 1 }}
           animate={{
             opacity: activeIndex === 0 ? 1 : 0,
             x: activeIndex === 0 ? "0px" : "96px",
@@ -121,6 +119,7 @@ export default function Carousal() {
         </motion.div>
         <motion.div
           className="carousal-second-img"
+          initial={{ opacity: 0 }}
           animate={{
             opacity: activeIndex === 0 ? 0.66 : activeIndex === 1 ? 1 : 0,
             x: activeIndex === 0 ? "-96px" : activeIndex === 1 ? "0px" : "96px",
@@ -132,6 +131,7 @@ export default function Carousal() {
         </motion.div>
         <motion.div
           className="carousal-third-img"
+          initial={{ opacity: 0 }}
           animate={{
             opacity: activeIndex === 0 ? 0.33 : activeIndex === 1 ? 0.66 : 1,
             x: activeIndex === 0 ? "-192px" : activeIndex === 1 ? "-96px" : 0,
@@ -148,7 +148,17 @@ export default function Carousal() {
         <CarousalControls>
           <div onClick={handlePreviousClick}>
             {activeIndex === 0 ? (
-              <Image src={prevDisabled} alt="previous button" width={30} className="disabled-img"/>
+              <Image
+                src={prevDisabled}
+                alt="previous button"
+                width={30}
+                className="disabled-img"
+                sx={{
+                  opacity: 1,
+                  transform: "translateY(0)",
+                  transition: "opacity 0.3s ease, transform 0.3s ease",
+                }}
+              />
             ) : (
               <CarousalPrevButton>
                 <ArrowBackIcon
@@ -163,9 +173,24 @@ export default function Carousal() {
           </div>
           <div onClick={handleNextClick}>
             {activeIndex === 2 ? (
-              <Image src={nextDisabled} alt="previous button" width={30} className="disabled-img"/>
+              <Image
+                src={nextDisabled}
+                alt="previous button"
+                width={30}
+                className="disabled-img"
+                style={{
+                  opacity: 0.5,
+                  transition: "opacity 0.3s ease",
+                }}
+              />
             ) : (
-              <CarousalNextButton>
+              <CarousalNextButton
+                sx={{
+                  opacity: 1,
+                  transform: "translateY(0)",
+                  transition: "opacity 0.3s ease, transform 0.3s ease",
+                }}
+              >
                 <ArrowForwardIcon
                   sx={{
                     color: "#FFF4B7",

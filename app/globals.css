@@ -22,6 +22,10 @@ nav {
   align-items: center;
   background-color: #b59f78;
   padding: 5px;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
 }
 
 a {
@@ -57,5 +61,16 @@ a {
 }
 
 .disabled-img {
-  margin: 5px 20px 5px 5px;
+  margin: 5px 5px 5px 20px;
 }
+
+/* @media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #b59f78;
+    padding: 5px;
+  }
+} */
