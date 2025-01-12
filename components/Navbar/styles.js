@@ -1,6 +1,5 @@
+import { Box, styled } from "@mui/system";
 import { Button } from "@mui/material";
-import { styled } from "@mui/material/styles";
-import { Box } from "@mui/system";
 
 export const MenuButton = styled(Button)({
   color: "#fff",
@@ -13,6 +12,7 @@ export const MenuButton = styled(Button)({
     boxShadow: "none",
   },
 });
+
 export const DonateButton = styled(Button)({
   display: "flex",
   alignItems: "center",
