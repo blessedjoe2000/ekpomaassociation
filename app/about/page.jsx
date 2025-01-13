@@ -1,12 +1,8 @@
 "use client";
 
-import {
-  BriefHeading,
-  WelcomeContainer,
-  WelcomeParagraph,
-} from "@/components/BriefAbout/styles";
+import { BriefHeading, WelcomeContainer } from "@/components/BriefAbout/styles";
 import { PhotoSilderHeading } from "@/components/PhotoSlider/styles";
-import { Button, CardMedia, Divider, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import img from "../../public/images/ai-generated.jpg";
 import Image from "next/image";
@@ -73,7 +69,7 @@ export default function About() {
 
       <ExecutiveContainer sx={{ py: "2rem" }}>
         <BriefHeading>
-          <h2>Our Executives</h2>
+          <h3>Our Executives</h3>
         </BriefHeading>
         <ExecutiveProfile>
           <ImageAndTitle>
@@ -126,12 +122,12 @@ export default function About() {
 
       <Container>
         <BriefHeading>
-          <h2>Our Meetings</h2>
+          <h3>Our Meetings</h3>
         </BriefHeading>
         <MeetingContainer>
           <Typography>
             The Ekpoma Association of Houston, Texas, meets once a month, every
-            <span> first Sunday</span>, from <span>6:00 PM to 7:00 PM</span>.
+            <span> first Sunday</span>, from <span>6:00 PM to 8:00 PM</span>.
             Our meetings provide an opportunity for members to connect, discuss
             community initiatives, and plan future activities aimed at
             supporting Esan West indigenes. We encourage new members to join us

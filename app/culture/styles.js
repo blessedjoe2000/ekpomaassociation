@@ -1,13 +1,9 @@
 import { Box, styled } from "@mui/system";
 
-export const DrawerContainer = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+export const TownTourProduceContainer = styled(Box)`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-  background-color: #b59f78;
-  padding: 1rem 0 2rem 0;
 `;
 export const DrawerMenu = styled(Box)`
   display: flex;

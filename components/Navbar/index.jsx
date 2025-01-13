@@ -9,7 +9,6 @@ import {
   DrawerContainer,
   DrawerMenu,
   MenuButton,
-  MenuLinkContainer,
   MobileMenuLogoContainer,
 } from "./styles";
 import VolunteerActivismRoundedIcon from "@mui/icons-material/VolunteerActivismRounded";
@@ -22,8 +21,6 @@ import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-
-const drawerWidth = 240;
 
 const DrawerHeader = styled("div")(({ theme }) => ({
   display: "flex",
@@ -61,14 +58,21 @@ export default function Navbar() {
               height={100}
             />
           </Link>
-          <MenuLinkContainer>
+          <Stack
+            direction="row"
+            spacing={{
+              xs: 1,
+              sm: 1,
+              md: 5,
+            }}
+          >
             <Link href="/">
               <MenuButton variant="outlined">Home</MenuButton>
             </Link>
             <Link href="/about">
               <MenuButton variant="outlined">About</MenuButton>
             </Link>
-            <Link href="/">
+            <Link href="/culture">
               <MenuButton variant="outlined">Culture</MenuButton>
             </Link>
             <Link href="/">
@@ -77,7 +81,7 @@ export default function Navbar() {
             <Link href="/">
               <MenuButton variant="outlined">Contact</MenuButton>
             </Link>
-          </MenuLinkContainer>
+          </Stack>
 
           <Link href="/">
             <DonateButton variant="contained">
@@ -123,12 +127,15 @@ export default function Navbar() {
 
           <Drawer
             sx={{
-              width: drawerWidth,
+              width: "50vw",
               flexShrink: 0,
               "& .MuiDrawer-paper": {
-                width: drawerWidth,
+                width: "50vw",
                 boxSizing: "border-box",
-                height: "350px",
+                height: {
+                  xs: "415px",
+                  sm: "423px",
+                },
               },
             }}
             variant="persistent"
@@ -149,14 +156,14 @@ export default function Navbar() {
             </DrawerHeader>
             <Divider />
             <DrawerContainer>
-              <DrawerMenu spacing={5}>
+              <DrawerMenu spacing={5} sx={{ pt: "10px" }}>
                 <Link href="/" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">Home</MenuButton>
                 </Link>
                 <Link href="/about" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">About</MenuButton>
                 </Link>
-                <Link href="/" onClick={handleDrawerClose}>
+                <Link href="/culture" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">Culture</MenuButton>
                 </Link>
                 <Link href="/" onClick={handleDrawerClose}>
