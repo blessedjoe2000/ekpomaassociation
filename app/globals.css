@@ -16,6 +16,15 @@ p {
   padding: 0;
 }
 
+span {
+  color: #118b50;
+  font-weight: bold;
+}
+
+.navbar-container {
+  margin-bottom: 7rem;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -159,4 +168,8 @@ a {
 .embla__slide {
   flex: 0 0 100%;
   min-width: 0;
+}
+
+.img {
+  border-radius: 100%;
 }

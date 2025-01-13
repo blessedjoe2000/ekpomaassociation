@@ -1,6 +1,17 @@
 import { Box, styled } from "@mui/system";
 import { Button } from "@mui/material";
 
+export const MenuLinkContainer = styled(Button)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  @media (max-width: 860px) {
+    gap: 10px;
+  }
+`;
+
 export const MenuButton = styled(Button)({
   color: "#fff",
   borderColor: "#fff",

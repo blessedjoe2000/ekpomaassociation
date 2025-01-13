@@ -11,7 +11,6 @@ export const CarousalContainer = styled(Box)`
   justify-content: space-between;
   gap: 20px;
   padding: 0 10vw 5rem 10vw;
-  margin-top: 7rem;
 
   @media (max-width: 1060px) {
     padding: 0rem 5vw 5rem 5vw;

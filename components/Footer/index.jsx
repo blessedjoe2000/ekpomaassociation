@@ -1,9 +1,7 @@
 "use client";
 
 import { Box } from "@mui/system";
-import logo from "../../public/images/ekpomaassologo.png";
 import Link from "next/link";
-import Image from "next/image";
 import VolunteerActivismRoundedIcon from "@mui/icons-material/VolunteerActivismRounded";
 import { DonateButton, MenuButton } from "../Navbar/styles";
 import { Divider } from "@mui/material";
@@ -13,7 +11,6 @@ import {
   FooterMenuContent,
   FooterSocialMediaIcons,
   FooterSocialMediaTitle,
-  FooterSociaTitle,
 } from "./styles";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -43,7 +40,7 @@ export default function Footer() {
         </Box>
 
         <FooterMenuContent>
-          <Link href="/">
+          <Link href="/about">
             <MenuButton variant="outlined">About</MenuButton>
           </Link>
           <Link href="/">

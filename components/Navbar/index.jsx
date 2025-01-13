@@ -9,6 +9,7 @@ import {
   DrawerContainer,
   DrawerMenu,
   MenuButton,
+  MenuLinkContainer,
   MobileMenuLogoContainer,
 } from "./styles";
 import VolunteerActivismRoundedIcon from "@mui/icons-material/VolunteerActivismRounded";
@@ -49,7 +50,7 @@ export default function Navbar() {
   };
 
   return (
-    <div>
+    <div className="navbar-container">
       {isMobile ? (
         <nav className="navbar">
           <Link href="/">
@@ -60,11 +61,11 @@ export default function Navbar() {
               height={100}
             />
           </Link>
-          <Stack direction="row" spacing={5}>
+          <MenuLinkContainer>
             <Link href="/">
               <MenuButton variant="outlined">Home</MenuButton>
             </Link>
-            <Link href="/">
+            <Link href="/about">
               <MenuButton variant="outlined">About</MenuButton>
             </Link>
             <Link href="/">
@@ -76,7 +77,7 @@ export default function Navbar() {
             <Link href="/">
               <MenuButton variant="outlined">Contact</MenuButton>
             </Link>
-          </Stack>
+          </MenuLinkContainer>
 
           <Link href="/">
             <DonateButton variant="contained">
@@ -152,7 +153,7 @@ export default function Navbar() {
                 <Link href="/" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">Home</MenuButton>
                 </Link>
-                <Link href="/" onClick={handleDrawerClose}>
+                <Link href="/about" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">About</MenuButton>
                 </Link>
                 <Link href="/" onClick={handleDrawerClose}>

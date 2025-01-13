@@ -38,7 +38,7 @@ export const FooterMenuContent = styled(Box)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 
   @media (max-width: 548px) {
     flex-direction: row;
