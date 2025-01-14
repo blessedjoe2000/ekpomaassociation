@@ -173,3 +173,7 @@ a {
 .img {
   border-radius: 100%;
 }
+
+.market {
+  border-radius: 10px;
+}

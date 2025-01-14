@@ -1,4 +1,3 @@
-import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -10,7 +9,7 @@ import Paper from "@mui/material/Paper";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
+    backgroundColor: "#118B50",
     color: theme.palette.common.white,
   },
   [`&.${tableCellClasses.body}`]: {
@@ -31,7 +30,13 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 export default function WardsTable() {
   return (
     <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <Table
+        sx={{
+          width: "100%",
+          minWidth: { sm: "100%", md: 300 }, // Full width on small devices, 350px on larger
+        }}
+        aria-label="customized table"
+      >
         <TableHead>
           <TableRow>
             <StyledTableCell>Wards</StyledTableCell>

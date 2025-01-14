@@ -30,7 +30,7 @@ export const WelcomeContainer = styled(Box)`
 `;
 
 export const WelcomeParagraph = styled(Typography)`
-  border: 2px solid #118b50;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   border-radius: 10px;
   padding: 1rem;
 `;
