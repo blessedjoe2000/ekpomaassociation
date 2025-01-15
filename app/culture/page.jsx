@@ -12,7 +12,6 @@ import {
 } from "./styles";
 import Image from "next/image";
 import WardsTable from "@/components/WardsTable";
-
 import esanwestmap from "../../public/images/eahesanwestmap.png";
 import market from "../../public/images/eahmarket.png";
 

@@ -4,8 +4,8 @@ import { BriefHeading, WelcomeContainer } from "@/components/BriefAbout/styles";
 import { PhotoSilderHeading } from "@/components/PhotoSlider/styles";
 import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
-import img from "../../public/images/ai-generated.jpg";
 import Image from "next/image";
+import img from "../../public/images/ai-generated.jpg";
 import {
   DuesButton,
   ExecutiveContainer,
