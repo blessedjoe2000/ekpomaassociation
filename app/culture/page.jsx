@@ -22,14 +22,21 @@ export default function culture() {
         <h2>Esan West People And Culture</h2>
       </BriefHeading>
       <Box sx={{ py: "2rem" }}>
-        <Typography sx={{ pb: "1rem" }}>
+        <Typography>
           Esan West is a Local Government Area in Edo State, Nigeria, with its
-          administrative headquarters located in the town of Ekpoma. Covering a
-          total area of 502 km², Esan West has an estimated population of over
-          190,000 people, comprising more than 60,000 adult males and 60,000
-          adult females, according to the 2016 census. With a population density
-          of approximately 333.3 people per km², it is one of the key regions
-          contributing to the socio-economic growth of Edo State.
+          headquarters in the town of Ekpoma. The area has a population of over
+          290,000 people, including more than 90,000 adult males and 80,000
+          adult females, according to the 2016 census. Esan West is politically
+          divided into 10 wards and covers a land mass of 502 km² (194 sq mi),
+          making it one of the prominent regions in Edo State.
+        </Typography>
+        <Typography sx={{ py: "1rem" }}>
+          The people of Esan West are predominantly of the Esan tribe, and many
+          are academic and non-academic staff of Ambrose Alli University, owners
+          of small and medium enterprises (SMEs), subsistence farmers, and
+          others engaged in civil service, trading, transportation, and students
+          of Ambrose Alli University. The primary language spoken is Esan, which
+          is consistent with the general Esan language spoken across Esanland.
         </Typography>
         <Typography>
           Esan West is home to the prestigious Ambrose Alli University (AAU),
@@ -37,6 +44,17 @@ export default function culture() {
           Alli, a former governor of Bendel State (now Edo and Delta States).
           The university has since become a center for academic excellence,
           attracting students from across the country and beyond.
+        </Typography>
+        <Typography sx={{ pt: "1rem" }}>
+          Ekpoma's traditional leadership is headed by the Onojie, the king of
+          the town, whose position is hereditary, passed down from father to
+          son. The Onojie,s palace is situated in a community named Eguare. The
+          village council, known as Iko-Edion, is led by the Odionwele, the
+          eldest member of the community, who presides over matters involving
+          the elders. The Edion (elders) are responsible for resolving disputes
+          and administering justice in the community. Communication from the
+          Onojie is conveyed through the Okhaimon to the Odionwele, who then
+          convenes a meeting of elders to discuss and address community matters.
         </Typography>
       </Box>
 

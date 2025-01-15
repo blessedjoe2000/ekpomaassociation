@@ -78,7 +78,7 @@ export default function Navbar() {
             <Link href="/gallery">
               <MenuButton variant="outlined">Gallery</MenuButton>
             </Link>
-            <Link href="/">
+            <Link href="/contact">
               <MenuButton variant="outlined">Contact</MenuButton>
             </Link>
           </Stack>
@@ -169,7 +169,7 @@ export default function Navbar() {
                 <Link href="/gallery" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">Gallery</MenuButton>
                 </Link>
-                <Link href="/" onClick={handleDrawerClose}>
+                <Link href="/contact" onClick={handleDrawerClose}>
                   <MenuButton variant="outlined">Contact</MenuButton>
                 </Link>
               </DrawerMenu>
