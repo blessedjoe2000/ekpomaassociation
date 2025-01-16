@@ -1,7 +1,16 @@
+import { Button } from "@mui/material";
 import { Box, styled } from "@mui/system";
 
 export const FormContainer = styled(Box)`
   display: flex;
-  justify-content: space-between;
   gap: 2rem;
+`;
+
+export const InputField = styled(Box)`
+  width: 100%;
+`;
+
+export const ContactButton = styled(Button)`
+  width: 100%;
+  padding: 1px 3px;
 `;

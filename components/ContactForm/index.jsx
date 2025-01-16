@@ -3,7 +3,8 @@
 import axios from "axios";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { FormContainer } from "./styles";
+import { FormContainer, InputField } from "./styles";
+import { DuesButton } from "@/app/about/styles";
 
 export default function ContactForm() {
   const [firstName, setFirstName] = useState("");
@@ -97,9 +98,9 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleContactUs} className=" pb-10 bg-white p-5 mx-5 mb-5">
-      <FormContainer className="sm:flex justify-between gap-2">
-        <div className="w-full">
+    <form onSubmit={handleContactUs}>
+      <FormContainer>
+        <InputField>
           <label htmlFor="firstName" name="firstName">
             First Name
           </label>
@@ -109,8 +110,8 @@ export default function ContactForm() {
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
-        </div>
-        <div className="w-full">
+        </InputField>
+        <InputField>
           <label htmlFor="lastName" name="lastName">
             Last Name
           </label>
@@ -120,11 +121,11 @@ export default function ContactForm() {
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
-        </div>
+        </InputField>
       </FormContainer>
 
-      <FormContainer className="sm:flex justify-between gap-2">
-        <div className="w-full">
+      <FormContainer>
+        <InputField>
           <label htmlFor="email" name="email">
             Email Address
           </label>
@@ -134,8 +135,8 @@ export default function ContactForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-        </div>
-        <div className="w-full">
+        </InputField>
+        <InputField>
           <label htmlFor="mobile" name="mobile">
             Phone Number
           </label>
@@ -145,7 +146,7 @@ export default function ContactForm() {
             value={mobile}
             onChange={(e) => setMobile(e.target.value)}
           />
-        </div>
+        </InputField>
       </FormContainer>
 
       <div>
@@ -162,14 +163,10 @@ export default function ContactForm() {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
       ></textarea>
-      <div className="flex justify-end">
-        <button
-          type="submit"
-          className="px-3 py-1 bg-sharp-red rounded-md text-white w-full"
-        >
-          Send
-        </button>
-      </div>
+
+      <DuesButton sx={{ m: "0", width: "100%" }} type="submit">
+        Send
+      </DuesButton>
     </form>
   );
 }
