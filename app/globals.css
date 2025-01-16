@@ -6,6 +6,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 h1,
@@ -38,6 +39,10 @@ input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
   border-color: #118b50;
+}
+
+form {
+  margin-bottom: 3rem;
 }
 
 .navbar-container {

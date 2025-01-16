@@ -4,6 +4,11 @@ import { Box, styled } from "@mui/system";
 export const FormContainer = styled(Box)`
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 `;
 
 export const InputField = styled(Box)`
