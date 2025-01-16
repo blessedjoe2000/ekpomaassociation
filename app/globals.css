@@ -21,6 +21,24 @@ span {
   font-weight: bold;
 }
 
+input,
+textarea,
+select {
+  border: 1px solid #b59f78;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border-color: #118b50;
+}
+
 .navbar-container {
   margin-bottom: 7rem;
 }
@@ -176,6 +194,15 @@ a {
 
 .market {
   border-radius: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  grid-row-end: span 1; /* This will be updated dynamically */
+  height: 100%;
+  object-fit: cover;
 }
 
 .gallery-img {

@@ -3,7 +3,7 @@
 import { BriefHeading } from "@/components/BriefAbout/styles";
 import { Box, Container } from "@mui/system";
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   GalleryImageContainer,
   NextButton,
@@ -35,6 +35,7 @@ const images = [
 
 export default function ChristmasParty2024() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
+  const containerRef = useRef(null);
 
   const handleKeyDown = (e) => {
     if (e.key === "Escape") {
@@ -70,11 +71,44 @@ export default function ChristmasParty2024() {
       );
     }
   };
+
+  useEffect(() => {
+    const galleryContainer = containerRef.current;
+    const handleImageLoad = () => {
+      if (galleryContainer) {
+        const items = galleryContainer.querySelectorAll(".gallery-item");
+        items.forEach((item) => {
+          const img = item?.querySelector("img");
+          if (img) {
+            const ratio = img.naturalHeight / img.naturalWidth;
+            const span = Math.ceil((250 * ratio) / 10);
+            item.style.gridRowEnd = `span ${span}`;
+          }
+        });
+      }
+    };
+
+    // Attach event listeners to all images
+    const images = galleryContainer?.querySelectorAll("img");
+    images?.forEach((img) => {
+      if (img.complete) {
+        handleImageLoad();
+      } else {
+        img.onload = handleImageLoad;
+      }
+    });
+
+    // Cleanup
+    return () => {
+      images?.forEach((img) => (img.onload = null));
+    };
+  }, []);
+
   return (
     <Container
       sx={{
-        mt: "10rem",
-        mb: "5rem",
+        mt: { xs: "7rem", sm: "9rem" },
+        mb: { xs: "2rem", sm: "4rem" },
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -84,24 +118,9 @@ export default function ChristmasParty2024() {
         <h3>Christmas Party 2023</h3>
       </BriefHeading>
 
-      <GalleryImageContainer>
+      <GalleryImageContainer ref={containerRef}>
         {images.map((url, index) => (
-          <Box
-            key={index}
-            sx={{ width: "100%", height: "auto" }}
-            ref={(el) => {
-              if (el) {
-                const img = el.querySelector("img");
-                if (img) {
-                  img.onload = () => {
-                    const ratio = img.naturalHeight / img.naturalWidth;
-                    const span = Math.ceil((250 * ratio) / 10);
-                    el.style.gridRowEnd = `span ${span}`;
-                  };
-                }
-              }
-            }}
-          >
+          <Box key={index} className="gallery-item">
             <Image
               src={url}
               alt={`Gallery image ${index + 1}`}
@@ -139,7 +158,13 @@ export default function ChristmasParty2024() {
                 />
               </svg>
             </PrevButton>
-            <Box>
+            <Box
+              sx={{
+                width: "100%",
+                maxWidth: "900px",
+                margin: "0 auto",
+              }}
+            >
               <Image
                 src={images[selectedImageIndex]}
                 alt="Selected"
@@ -147,6 +172,11 @@ export default function ChristmasParty2024() {
                 height={500}
                 onClick={(e) => e.stopPropagation()}
                 className="preview-img"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "cover",
+                }}
               />
             </Box>
             <NextButton

@@ -13,9 +13,37 @@ import {
   GalleryPhotoAndTitle,
   GalleryPhotosContainer,
   PhotoTitle,
+  PhotoWrapper,
 } from "./styles";
 
 export default function Gallery() {
+  const imageDetails = [
+    {
+      url: slider1,
+      title: "Christmas Party 2024",
+      link: "/christmasparty2024",
+    },
+    {
+      url: market,
+      title: "Picnic 2024",
+      link: "/christmasparty2024",
+    },
+    {
+      url: slider2,
+      title: "Christmas Party 2023",
+      link: "/christmasparty2024",
+    },
+    {
+      url: img,
+      title: "Workshop 2023",
+      link: "/christmasparty2024",
+    },
+    {
+      url: slider3,
+      title: "Christmas Party 2022",
+      link: "/christmasparty2024",
+    },
+  ];
   return (
     <Container sx={{ py: "3rem" }}>
       <Box>
@@ -24,56 +52,25 @@ export default function Gallery() {
         </BriefHeading>
 
         <GalleryPhotosContainer>
-          <GalleryPhotoAndTitle>
-            <Link href="/christmasparty2024">
-              <Image
-                src={slider1}
-                alt="photo gallery"
-                width={300}
-                height={200}
-              />
-              <PhotoTitle>Christmas Party 2024</PhotoTitle>
-            </Link>
-          </GalleryPhotoAndTitle>
-          <GalleryPhotoAndTitle>
-            <Link href="/christmasparty2024">
-              <Image
-                src={market}
-                alt="photo gallery"
-                width={300}
-                height={200}
-              />
-              <PhotoTitle>Picnic 2024</PhotoTitle>
-            </Link>
-          </GalleryPhotoAndTitle>
-          <GalleryPhotoAndTitle>
-            <Link href="/christmasparty2024">
-              <Image
-                src={slider2}
-                alt="photo gallery"
-                width={300}
-                height={200}
-              />
-              <PhotoTitle>Christmas Party 2023</PhotoTitle>
-            </Link>
-          </GalleryPhotoAndTitle>
-          <GalleryPhotoAndTitle>
-            <Link href="/christmasparty2024">
-              <Image src={img} alt="photo gallery" width={300} height={200} />
-              <PhotoTitle>Award Night 2023</PhotoTitle>
-            </Link>
-          </GalleryPhotoAndTitle>
-          <GalleryPhotoAndTitle>
-            <Link href="/christmasparty2024">
-              <Image
-                src={slider3}
-                alt="photo gallery"
-                width={300}
-                height={200}
-              />
-              <PhotoTitle>Christmas Party 2022</PhotoTitle>
-            </Link>
-          </GalleryPhotoAndTitle>
+          {imageDetails.map((imageDetail, index) => (
+            <GalleryPhotoAndTitle key={index}>
+              <Link href={imageDetail.link}>
+                <PhotoWrapper>
+                  <Image
+                    src={imageDetail.url}
+                    alt="photo gallery"
+                    style={{
+                      objectFit: "cover",
+                      width: "100%",
+                      height: "100%",
+                    }}
+                    sizes="(max-width: 600px) 100vw, 300px"
+                  />
+                </PhotoWrapper>
+                <PhotoTitle>{imageDetail.title}</PhotoTitle>
+              </Link>
+            </GalleryPhotoAndTitle>
+          ))}
         </GalleryPhotosContainer>
       </Box>
     </Container>

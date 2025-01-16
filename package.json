@@ -16,6 +16,7 @@
     "@mui/material": "^6.3.1",
     "@mui/system": "^6.3.1",
     "aos": "^2.3.4",
+    "axios": "^1.7.9",
     "embla-carousel-auto-scroll": "^8.5.2",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
@@ -23,10 +24,9 @@
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
-    "react-grid-gallery": "^1.0.1",
-    "react-photo-album": "^3.0.2",
+    "react-hot-toast": "^2.5.1",
     "react-slideshow-image": "^4.3.2",
-    "sass": "^1.83.1"
+    "resend": "^4.1.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

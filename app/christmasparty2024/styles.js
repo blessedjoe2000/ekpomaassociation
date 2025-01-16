@@ -6,7 +6,11 @@ export const GalleryImageContainer = styled(Box)`
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   gap: 5px;
-  margin-top: 2rem;
+  margin-top: 1rem;
+
+  @media (max-width: 545px) {
+    margin-top: 0.5rem;
+  }
 `;
 
 export const PhotoPreviewContainer = styled(Box)`

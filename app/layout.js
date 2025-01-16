@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 import Footer from "@/components/Footer";
+import { Toaster } from "react-hot-toast";
 
 export const metadata = {
   title: "Ekpoma Association of Houston",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <Toaster position="top-right" />
         <Navbar />
         {children}
         <Footer />
