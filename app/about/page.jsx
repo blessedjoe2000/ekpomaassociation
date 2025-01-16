@@ -136,7 +136,7 @@ export default function About() {
             fund our programs and support our mission of cultural preservation
             and community development.
           </Typography>
-          <Link href="/">
+          <Link href="/https://buy.stripe.com/4gw2b9a2caZzeiceUY">
             <DuesButton>Click here to pay monthly dues</DuesButton>
           </Link>
         </MeetingContainer>

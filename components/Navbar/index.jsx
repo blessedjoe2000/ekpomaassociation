@@ -83,7 +83,7 @@ export default function Navbar() {
             </Link>
           </Stack>
 
-          <Link href="/">
+          <Link href="/https://buy.stripe.com/8wMcPN2zKebL8XSfZ1">
             <DonateButton variant="contained">
               Donate
               <VolunteerActivismRoundedIcon fontSize="small" />
