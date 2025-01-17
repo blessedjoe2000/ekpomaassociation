@@ -94,7 +94,10 @@ export default function Navbar() {
             </Link>
           </Stack>
 
-          <Link href="/https://buy.stripe.com/8wMcPN2zKebL8XSfZ1">
+          <Link
+            href="https://buy.stripe.com/8wMcPN2zKebL8XSfZ1"
+            target="_blank"
+          >
             <DonateButton variant="contained">
               Donate
               <VolunteerActivismRoundedIcon fontSize="small" />
@@ -187,7 +190,11 @@ export default function Navbar() {
                   <MenuButton variant="outlined">Contact</MenuButton>
                 </Link>
               </DrawerMenu>
-              <Link href="/" onClick={handleDrawerClose}>
+              <Link
+                href="https://buy.stripe.com/8wMcPN2zKebL8XSfZ1"
+                target="_blank"
+                onClick={handleDrawerClose}
+              >
                 <DonateButton variant="contained">
                   Donate
                   <VolunteerActivismRoundedIcon fontSize="small" />

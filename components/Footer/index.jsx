@@ -33,7 +33,7 @@ export default function Footer() {
             <MenuButton variant="outlined">Contact</MenuButton>
           </Link>
         </FooterMenuContent>
-        <Link href="/https://buy.stripe.com/8wMcPN2zKebL8XSfZ1">
+        <Link href="https://buy.stripe.com/8wMcPN2zKebL8XSfZ1" target="_blank">
           <DonateButton variant="contained">
             Donate
             <VolunteerActivismRoundedIcon fontSize="small" />
