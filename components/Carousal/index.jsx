@@ -115,7 +115,12 @@ export default function Carousal() {
           }}
           transition={{ duration: 0.5, delay: 0, ease: "easeInOut" }}
         >
-          <Image className="firstImg" src={imageOne} alt="men wearing igbulu" />
+          <Image
+            className="firstImg"
+            src={imageOne}
+            alt="men wearing igbulu"
+            priority
+          />
         </motion.div>
         <motion.div
           className="carousal-second-img"

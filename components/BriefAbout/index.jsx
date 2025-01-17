@@ -17,10 +17,17 @@ export default function BriefAbout() {
   }, []);
 
   return (
-    <div className="brief">
+    <div className="brief" style={{ position: "relative" }}>
+      <Image
+        src="/images/eahgradient.jpg"
+        alt="Background"
+        fill
+        quality={100}
+        priority
+      />
       <Container>
         <Box>
-          <BriefHeading>
+          <BriefHeading data-aos="fade-down">
             <h2>We Are One Big Family</h2>
           </BriefHeading>
           <WelcomeContainer>

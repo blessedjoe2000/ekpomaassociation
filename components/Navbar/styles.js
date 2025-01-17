@@ -1,6 +1,12 @@
 import { Box, styled } from "@mui/system";
 import { Button } from "@mui/material";
 
+export const MenuLoading = styled(Box)`
+  background-color: #b59f78;
+  padding: 5px;
+  height: 100px;
+`;
+
 export const MenuButton = styled(Button)({
   color: "#fff",
   borderColor: "#fff",

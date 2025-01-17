@@ -9,10 +9,11 @@ import {
   DrawerContainer,
   DrawerMenu,
   MenuButton,
+  MenuLoading,
   MobileMenuLogoContainer,
 } from "./styles";
 import VolunteerActivismRoundedIcon from "@mui/icons-material/VolunteerActivismRounded";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -37,6 +38,11 @@ export default function Navbar() {
   const isMobile = useMediaQuery(theme.breakpoints.up("769"));
 
   const [open, setOpen] = useState(false);
+  const [isScreenReady, setIsScreenReady] = useState(false);
+
+  useEffect(() => {
+    setIsScreenReady(true);
+  }, []);
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -46,9 +52,13 @@ export default function Navbar() {
     setOpen(false);
   };
 
+  if (!isScreenReady) {
+    return <MenuLoading></MenuLoading>;
+  }
+
   return (
     <div className="navbar-container">
-      {isMobile ? (
+      {isMobile && (
         <nav className="navbar">
           <Link href="/">
             <Image
@@ -56,6 +66,7 @@ export default function Navbar() {
               alt="logo ekpoma association of houston"
               width={100}
               height={100}
+              priority
             />
           </Link>
           <Stack
@@ -90,7 +101,9 @@ export default function Navbar() {
             </DonateButton>
           </Link>
         </nav>
-      ) : (
+      )}
+
+      {!isMobile && (
         <Box
           sx={{
             backgroundColor: "#b59f78",
@@ -119,6 +132,7 @@ export default function Navbar() {
                   alt="logo ekpoma association of houston"
                   width={100}
                   height={100}
+                  priority
                 />
               </Link>
               <MenuIcon sx={{ color: "transparent" }} />

@@ -6,7 +6,11 @@ export const PhotoSilderContainer = styled(Box)`
   flex-direction: column;
   align-self: center;
   justify-content: center;
-  margin: 2rem 0;
+  margin: 3rem 0 5rem 0;
+
+  @media (max-width: 768px) {
+    margin-bottom: 3rem;
+  }
 `;
 
 export const PhotoSilderHeading = styled(Box)`

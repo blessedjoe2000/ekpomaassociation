@@ -25,25 +25,67 @@ export default function PhotoSlider() {
       <div className="embla" ref={emblaRef}>
         <div className="embla__container">
           <div className="embla__slide">
-            <Image src={slider1} alt="slider1" />
+            <Image
+              src={slider2}
+              alt="slider1"
+              width={1280}
+              height={720}
+              className="embla__slide-img"
+            />
           </div>
           <div className="embla__slide">
-            <Image src={slider2} alt="slider2" />
+            <Image
+              src={slider1}
+              alt="slider2"
+              width={1280}
+              height={720}
+              className="embla__slide-img"
+            />
           </div>
           <div className="embla__slide">
-            <Image src={slider3} alt="slider3" />
+            <Image
+              src={slider3}
+              alt="slider3"
+              width={1280}
+              height={720}
+              className="embla__slide-img"
+            />
           </div>
           <div className="embla__slide">
-            <Image src={slider1} alt="slider4" />
+            <Image
+              src={slider2}
+              alt="slider4"
+              width={1280}
+              height={720}
+              className="embla__slide-img"
+            />
           </div>
           <div className="embla__slide">
-            <Image src={slider2} alt="slider5" />
+            <Image
+              src={slider1}
+              alt="slider5"
+              width={1280}
+              height={720}
+              className="embla__slide-img"
+            />
           </div>
           <div className="embla__slide">
-            <Image src={slider3} alt="slider6" />
+            <Image
+              src={slider3}
+              alt="slider6"
+              width={1280}
+              height={720}
+              className="embla__slide-img"
+            />
           </div>
           <div className="embla__slide">
-            <Image src={slider1} alt="slider17" />
+            <Image
+              src={slider2}
+              alt="slider17"
+              width={1280}
+              height={720}
+              className="embla__slide-img"
+            />
           </div>
         </div>
       </div>

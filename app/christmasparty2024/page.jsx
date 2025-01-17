@@ -124,7 +124,6 @@ export default function ChristmasParty2024() {
             <Image
               src={url}
               alt={`Gallery image ${index + 1}`}
-              layout="responsive"
               width={250}
               height={250}
               className="gallery-img"
