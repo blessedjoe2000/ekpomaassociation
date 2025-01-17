@@ -12,6 +12,8 @@ import {
   PhotoSilderContainer,
   PhotoSilderHeading,
 } from "./styles";
+import Link from "next/link";
+import { Container } from "@mui/system";
 
 export default function PhotoSlider() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
@@ -89,7 +91,11 @@ export default function PhotoSlider() {
           </div>
         </div>
       </div>
-      <PhotoSilderButton>View more</PhotoSilderButton>
+      <Container>
+        <Link href="/gallery">
+          <PhotoSilderButton>View more</PhotoSilderButton>
+        </Link>
+      </Container>
     </PhotoSilderContainer>
   );
 }

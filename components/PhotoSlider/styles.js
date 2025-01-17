@@ -31,5 +31,6 @@ export const PhotoSilderButton = styled(Button)`
   color: #fff;
   background-color: #118b50;
   border-radius: 10px;
-  margin: 1rem;
+  padding: 5px 1rem;
+  width: 100%;
 `;
