@@ -21,23 +21,59 @@ export const CarousalContainer = styled(Box)`
     padding: 0rem 10vw 5rem 10vw;
     height: 100vh;
   }
+  @media (max-width: 645px) {
+    padding: 3rem 5vw 35rem 5vw;
+  }
+  @media (max-width: 600px) {
+    padding: 3rem 5vw 6rem 5vw;
+  }
   @media (max-width: 545px) {
     padding: 3rem 5vw 15rem 5vw;
   }
   @media (max-width: 528px) {
     padding: 2rem 5vw 5rem 5vw;
   }
+  @media (max-width: 415px) {
+    padding: 2rem 5vw 10rem 5vw;
+  }
+  @media (max-width: 414px) {
+    padding: 2rem 5vw 12rem 5vw;
+  }
+  @media (max-width: 412px) {
+    padding: 2rem 5vw 5rem 5vw;
+  }
   @media (max-width: 408px) {
     padding: 2rem 5vw 8rem 5vw;
+  }
+  @media (max-width: 398px) {
+    padding: 2rem 5vw 10rem 5vw;
+  }
+  @media (max-width: 390px) {
+    padding: 2rem 5vw 20rem 5vw;
   }
   @media (max-width: 378px) {
     padding: 2rem 5vw 18rem 5vw;
   }
+  @media (max-width: 375px) {
+    padding: 2rem 5vw 10rem 5vw;
+  }
   @media (max-width: 362px) {
     padding: 2rem 5vw 14rem 5vw;
   }
+  @media (max-width: 360px) {
+    padding: 2rem 5vw 20rem 5vw;
+  }
+  @media (max-width: 353px) {
+    padding: 2rem 5vw 15rem 5vw;
+  }
   @media (max-width: 348px) {
     padding: 2rem 5vw 7rem 5vw;
+  }
+  @media (max-width: 322px) {
+    padding: 2rem 5vw 20rem 5vw;
+  }
+  @media (max-width: 320px) {
+    padding: 2rem 5vw 29rem 5vw;
   }
 `;
 
