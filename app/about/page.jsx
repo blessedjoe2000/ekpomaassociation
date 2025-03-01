@@ -77,7 +77,7 @@ export default function About() {
         <ExecutiveProfile>
           <ImageAndTitle>
             <Image
-              src={president}
+              src="/images/eah_president.jpg"
               alt="president"
               width={300}
               height={300}
@@ -88,7 +88,7 @@ export default function About() {
           </ImageAndTitle>
           <ImageAndTitle>
             <Image
-              src={vp}
+              src="/images/eah_vicepresident.jpg"
               alt="vice president"
               width={300}
               height={300}
@@ -97,9 +97,21 @@ export default function About() {
             <ExecutiveName>Dr. Deborah Irabor</ExecutiveName>
             <ExecutiveTitle>Vice President</ExecutiveTitle>
           </ImageAndTitle>
+
           <ImageAndTitle>
             <Image
-              src={pro}
+              src="/images/eah_secretary.jpg"
+              alt="secretary"
+              width={300}
+              height={300}
+              className="img"
+            />
+            <ExecutiveName>Mrs. Adesua Penn</ExecutiveName>
+            <ExecutiveTitle>Secretary</ExecutiveTitle>
+          </ImageAndTitle>
+          <ImageAndTitle>
+            <Image
+              src="/images/eah_pro.jpg"
               alt="PRO"
               width={300}
               height={300}
@@ -108,17 +120,6 @@ export default function About() {
 
             <ExecutiveName>Mrs Philomena Ohen</ExecutiveName>
             <ExecutiveTitle>PRO</ExecutiveTitle>
-          </ImageAndTitle>
-          <ImageAndTitle>
-            <Image
-              src={secretary}
-              alt="secretary"
-              width={300}
-              height={300}
-              className="img"
-            />
-            <ExecutiveName>Mrs. Adesua Penn</ExecutiveName>
-            <ExecutiveTitle>Secretary</ExecutiveTitle>
           </ImageAndTitle>
         </ExecutiveProfile>
       </ExecutiveContainer>
