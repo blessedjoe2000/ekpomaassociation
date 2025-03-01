@@ -5,10 +5,10 @@ import { PhotoSilderHeading } from "@/components/PhotoSlider/styles";
 import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import Image from "next/image";
-import president from "../../public/images/eah_president.jpg";
-import vp from "../../public/images/eah_vicepresident.jpg";
-import secretary from "../../public/images/eah_secretary.jpg";
-import pro from "../../public/images/eah_pro.jpg";
+import president from "@/public/images/eah_president.jpg";
+import vp from "@/public/images/eah_vicepresident.jpg";
+import secretary from "@/public/images/eah_secretary.jpg";
+import pro from "@/public/images/eah_pro.jpg";
 import {
   DuesButton,
   ExecutiveContainer,
