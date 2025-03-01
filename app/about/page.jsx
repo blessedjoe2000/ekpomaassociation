@@ -5,8 +5,8 @@ import { PhotoSilderHeading } from "@/components/PhotoSlider/styles";
 import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import Image from "next/image";
-import president from "../../public/images/eahpresident.jpg";
-import vp from "../../public/images/eahvicepresident.jpg";
+import president from "@/public/images/eahpresident.jpg";
+import vp from "@/public/images/eahvicepresident.jpg";
 import secretary from "@/public/images/eahsecretary.jpg";
 import pro from "@/public/images/eahpro.jpg";
 import {
