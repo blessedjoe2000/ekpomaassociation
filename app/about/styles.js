@@ -16,7 +16,7 @@ export const ExecutiveContainer = styled(Box)`
 export const ExecutiveProfile = styled(Box)`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   gap: 5px;
 
@@ -45,8 +45,8 @@ export const ExecutiveName = styled(Box)`
 
 export const ExecutiveTitle = styled(Box)`
   font-size: 1.2rem;
-  font-weight: 200;
-  color: #fff;
+  font-weight: 500;
+  color: #118b50;
 `;
 
 export const MeetingContainer = styled(Box)`

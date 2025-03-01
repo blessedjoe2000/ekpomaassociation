@@ -5,7 +5,10 @@ import { PhotoSilderHeading } from "@/components/PhotoSlider/styles";
 import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import Image from "next/image";
-import img from "../../public/images/ai-generated.jpg";
+import president from "../../public/images/eah_president.jpg";
+import vp from "../../public/images/eah_vicepresident.jpg";
+import secretary from "../../public/images/eah_secretary.jpg";
+import pro from "../../public/images/eah_pro.jpg";
 import {
   DuesButton,
   ExecutiveContainer,
@@ -74,8 +77,8 @@ export default function About() {
         <ExecutiveProfile>
           <ImageAndTitle>
             <Image
-              src={img}
-              alt="executives"
+              src={president}
+              alt="president"
               width={300}
               height={300}
               className="img"
@@ -85,8 +88,8 @@ export default function About() {
           </ImageAndTitle>
           <ImageAndTitle>
             <Image
-              src={img}
-              alt="executives"
+              src={vp}
+              alt="vice president"
               width={300}
               height={300}
               className="img"
@@ -96,20 +99,20 @@ export default function About() {
           </ImageAndTitle>
           <ImageAndTitle>
             <Image
-              src={img}
-              alt="executives"
+              src={pro}
+              alt="PRO"
               width={300}
               height={300}
               className="img"
             />
 
-            <ExecutiveName>Mrs Omoye Obeahon</ExecutiveName>
-            <ExecutiveTitle>Treasurer/Financial Secretary</ExecutiveTitle>
+            <ExecutiveName>Mrs Philomena Ohen</ExecutiveName>
+            <ExecutiveTitle>PRO</ExecutiveTitle>
           </ImageAndTitle>
           <ImageAndTitle>
             <Image
-              src={img}
-              alt="executives"
+              src={secretary}
+              alt="secretary"
               width={300}
               height={300}
               className="img"
