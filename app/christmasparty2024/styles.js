@@ -32,6 +32,7 @@ export const PrevButton = styled(Button)`
   background-color: transparent;
   padding: 5px;
   margin-left: 20px;
+  z-index: 100;
 `;
 
 export const NextButton = styled(Button)`
@@ -42,4 +43,5 @@ export const NextButton = styled(Button)`
   background-color: transparent;
   padding: 5px;
   margin-right: 10px;
+  z-index: 100;
 `;
