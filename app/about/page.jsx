@@ -70,14 +70,14 @@ export default function About() {
         </WelcomeContainer>
       </Container>
 
-      <ExecutiveContainer sx={{ py: "2rem" }}>
+      <ExecutiveContainer sx={{ p: "2rem" }}>
         <BriefHeading>
           <h3>Our Executives</h3>
         </BriefHeading>
         <ExecutiveProfile>
           <ImageAndTitle>
             <Image
-              src={president}
+              src="https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylam3c6KMws9PCJub6mnGgRpjSwhzxIoirDekN"
               alt="president"
               width={300}
               height={300}
@@ -88,7 +88,7 @@ export default function About() {
           </ImageAndTitle>
           <ImageAndTitle>
             <Image
-              src={vp}
+              src="https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylccD5sRIto4UnRQ2FHbWYLvBlqZi897yKgOpr"
               alt="vice president"
               width={300}
               height={300}
@@ -100,7 +100,7 @@ export default function About() {
 
           <ImageAndTitle>
             <Image
-              src={secretary}
+              src="https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylazTfdYws9PCJub6mnGgRpjSwhzxIoirDekN5"
               alt="secretary"
               width={300}
               height={300}
@@ -111,7 +111,7 @@ export default function About() {
           </ImageAndTitle>
           <ImageAndTitle>
             <Image
-              src={pro}
+              src="https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylVb6M4pq8Ckl7gdPxpa5TyKHznUiuAr1Oq93t"
               alt="PRO"
               width={300}
               height={300}
@@ -140,7 +140,10 @@ export default function About() {
             fund our programs and support our mission of cultural preservation
             and community development.
           </Typography>
-          <Link href="https://buy.stripe.com/4gw2b9a2caZzeiceUY">
+          <Link
+            href="https://buy.stripe.com/4gw2b9a2caZzeiceUY"
+            target="_blank"
+          >
             <DuesButton>Click here to pay monthly dues</DuesButton>
           </Link>
         </MeetingContainer>

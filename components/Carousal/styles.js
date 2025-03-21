@@ -130,7 +130,7 @@ export const CarousalImagesContainer = styled(Box)`
   justify-content: flex-start;
   position: relative;
   height: 35rem;
-  @media (max-width: 768px) {
+  @media (max-width: 430px) {
   }
 `;
 
