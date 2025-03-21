@@ -147,6 +147,7 @@ export default function Picnic2024() {
         <PhotoPreviewContainer onClick={() => setSelectedImageIndex(null)}>
           <Box sx={{ position: "relative" }}>
             <PrevButton
+              disableRipple={true}
               onClick={(e) => {
                 e.stopPropagation();
                 prevImage();
@@ -169,9 +170,10 @@ export default function Picnic2024() {
             </PrevButton>
             <Box
               sx={{
-                width: "100%",
+                width: "90%",
                 maxWidth: "900px",
                 margin: "0 auto",
+                padding: { xs: "20px", md: "40px" },
               }}
             >
               <Image
@@ -181,11 +183,11 @@ export default function Picnic2024() {
                 height={500}
                 onClick={(e) => e.stopPropagation()}
                 className="preview-img"
-                layout="responsive"
-                objectFit="contain"
+                style={{ width: "100%", height: "auto", objectFit: "contain" }}
               />
             </Box>
             <NextButton
+              disableRipple={true}
               onClick={(e) => {
                 e.stopPropagation();
                 nextImage();

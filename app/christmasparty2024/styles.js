@@ -21,7 +21,7 @@ export const PhotoPreviewContainer = styled(Box)`
   align-items: center;
   justify-content: center;
   z-index: 50;
-  margin-top: 6rem;
+  padding: 5rem 2rem 0rem 1rem;
 `;
 
 export const PrevButton = styled(Button)`
@@ -30,7 +30,8 @@ export const PrevButton = styled(Button)`
   left: 0;
   transform: translateY(-50%);
   background-color: transparent;
-  padding: 0.5rem;
+  padding: 5px;
+  margin-left: 20px;
 `;
 
 export const NextButton = styled(Button)`
@@ -39,5 +40,6 @@ export const NextButton = styled(Button)`
   right: 0;
   transform: translateY(-50%);
   background-color: transparent;
-  padding: 0.5rem;
+  padding: 5px;
+  margin-right: 10px;
 `;
