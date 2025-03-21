@@ -4,11 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Box, Container } from "@mui/system";
 import { BriefHeading } from "@/components/BriefAbout/styles";
-import slider1 from "../../public/images/eahslider1.jpg";
-import slider2 from "../../public/images/eahslider2.jpg";
-import slider3 from "../../public/images/eahslider3.jpg";
-import market from "../../public/images/eahmarket.png";
-import img from "../../public/images/ai-generated.jpg";
+
 import {
   GalleryPhotoAndTitle,
   GalleryPhotosContainer,
@@ -19,29 +15,14 @@ import {
 export default function Gallery() {
   const imageDetails = [
     {
-      url: slider1,
+      url: "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yli9RssCBR7yleDIi3rQqZPCoN1hanUJT0f2Fw",
       title: "Christmas Party 2024",
       link: "/christmasparty2024",
     },
     {
-      url: market,
+      url: "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylYVSKo5HctAbyUL8zEmSuFJM39csh20ZRfIXW",
       title: "Picnic 2024",
-      link: "/christmasparty2024",
-    },
-    {
-      url: slider2,
-      title: "Christmas Party 2023",
-      link: "/christmasparty2024",
-    },
-    {
-      url: img,
-      title: "Workshop 2023",
-      link: "/christmasparty2024",
-    },
-    {
-      url: slider3,
-      title: "Christmas Party 2022",
-      link: "/christmasparty2024",
+      link: "/picnic2024",
     },
   ];
   return (
@@ -59,12 +40,10 @@ export default function Gallery() {
                   <Image
                     src={imageDetail.url}
                     alt="photo gallery"
-                    style={{
-                      objectFit: "cover",
-                      width: "100%",
-                      height: "100%",
-                    }}
-                    sizes="(max-width: 600px) 100vw, 300px"
+                    className="card-cover"
+                    width={300}
+                    height={200}
+                    sizes="(max-width: 300px) 100vw, 300px"
                   />
                 </PhotoWrapper>
                 <PhotoTitle>{imageDetail.title}</PhotoTitle>

@@ -4,35 +4,46 @@ import { BriefHeading } from "@/components/BriefAbout/styles";
 import { Box, Container } from "@mui/system";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import { DuesButton } from "../about/styles";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import {
   GalleryImageContainer,
   NextButton,
   PhotoPreviewContainer,
   PrevButton,
-} from "./styles";
-import Link from "next/link";
-import { DuesButton } from "../about/styles";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+} from "../christmasparty2024/styles";
 
 const images = [
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylRYYfATr9CYLAUnbsQrZE0D2tzdcKP6SilWFy",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yli9RssCBR7yleDIi3rQqZPCoN1hanUJT0f2Fw",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylVSbrL3Eq8Ckl7gdPxpa5TyKHznUiuAr1Oq93",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylnB7Cv2DOSk9MGyezAuI7xVBXjNqvPmZhop24",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylGHkJ0FKFxVWDe3tbp97nSCa80GAdjXZi2KhM",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl0F6OWFh1318kcaiIfUEGpg7LlO4MKyYh59Pu",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylodhSMX0DiwObjC6uXvY5QPqmRgz9VK18aWML",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylbFa89guFOnjBxXlHKGIYUz6NqMmwCd3QuTot",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylxhcQGHUTGKEm1lUuJ4ZFNH2r6aWP7ygO5ehd",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl6h5v01NkRfzXLC3TaonvK6eyq7P1Zli54tcO",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl0Riknz1318kcaiIfUEGpg7LlO4MKyYh59Puq",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylKr8BvG5WUl0zLIR6AQesbi38mV25D4ntg7Np",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylLx7oRVvFGmS65j0YbPvl4Z8NxRo7quM2kgJ1",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylwflwFFj14lsFeMIp2Jq9KTRZWygmcndQBoUH",
-  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylGRHWbVbKFxVWDe3tbp97nSCa80GAdjXZi2Kh",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylrCt0hXWxoDesRSI8hcfgtWaZlP9MYjzTBu1b",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl7xxEjKs2ZuSmvYG4TVUqzhstgiBI0oWwX5LD",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylWTo7Re4EJXb6jxskYz1HpPr7iCSqAl2NumcE",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylSbBdbrS6jChrdowiUVMmWRsP4f6u5731O0gn",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylGpiCGvKFxVWDe3tbp97nSCa80GAdjXZi2KhM",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylHWV3eO7yeYOfNubpKTBvq4inAo2lg106sCXc",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylAbHHuQT5FPbReoNBJyhHxriIDClKavVOMwGA",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl9vFeYvbyG43MvQCVFxZKLXognjy56I7kuiT8",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylXidEpFPYiUb4HElNBWgr3sevm75p8C9D0fJT",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylwQnS007j14lsFeMIp2Jq9KTRZWygmcndQBoU",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylrB2Cb1WxoDesRSI8hcfgtWaZlP9MYjzTBu1b",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylgfEfFchFckhm1szQgBJNa2le8WntAViy4qHj",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl5dBTvoRLAcfmhRMi2bukWKQpHZYr0dNqJzDy",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylpff6rpHFB8HUZjTC5R3fNdAiaJIFKsLzlSxt",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylEQ6PGfAzPBMejFxC251ZRhboGi9lJIqHcV08",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylgXqK30hFckhm1szQgBJNa2le8WntAViy4qHj",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylTxIvCwHFVfg4vHd7PeNlCj2xtXoc9YAaBJuK",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl9vFeYvbyG43MvQCVFxZKLXognjy56I7kuiT8",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl9Axo4ZyG43MvQCVFxZKLXognjy56I7kuiT80",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl68RZANkRfzXLC3TaonvK6eyq7P1Zli54tcON",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylg0kPobihFckhm1szQgBJNa2le8WntAViy4qH",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yly4FniYjL1KU4BY9gSm23tNIMwd6TvrRCuO8J",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylNmiVJxbEsNj217JCU8IWSaruLRq5ZzMtXHPQ",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylxFR9RyUTGKEm1lUuJ4ZFNH2r6aWP7ygO5ehd",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylXQ8o4GPYiUb4HElNBWgr3sevm75p8C9D0fJT",
+  "https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7yl4mbhHjgDU9LFuydA8welEVvsT63z1ipfkBGQ",
 ];
 
-export default function ChristmasParty2024() {
+export default function Picnic2024() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(null);
   const containerRef = useRef(null);
 
@@ -114,7 +125,7 @@ export default function ChristmasParty2024() {
       }}
     >
       <BriefHeading>
-        <h3>Christmas Party 2024</h3>
+        <h3>Picnic 2024</h3>
       </BriefHeading>
 
       <GalleryImageContainer ref={containerRef}>
