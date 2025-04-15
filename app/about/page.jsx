@@ -6,6 +6,9 @@ import { Typography } from "@mui/material";
 import { Box, Container } from "@mui/system";
 import Image from "next/image";
 import {
+  CommitteeContainer,
+  CommitteeDetails,
+  CommitteeHeading,
   DuesButton,
   ExecutiveContainer,
   ExecutiveName,
@@ -16,6 +19,7 @@ import {
   MissionVisionContainer,
 } from "./styles";
 import Link from "next/link";
+import Committees from "@/components/Committees/Committees";
 
 export default function About() {
   return (
@@ -75,8 +79,8 @@ export default function About() {
             <Image
               src="https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylam3c6KMws9PCJub6mnGgRpjSwhzxIoirDekN"
               alt="president"
-              width={300}
-              height={300}
+              width={280}
+              height={280}
               className="img"
             />
             <ExecutiveName>Mr. Solomon Aikharaekpen</ExecutiveName>
@@ -86,8 +90,8 @@ export default function About() {
             <Image
               src="https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylccD5sRIto4UnRQ2FHbWYLvBlqZi897yKgOpr"
               alt="vice president"
-              width={300}
-              height={300}
+              width={280}
+              height={280}
               className="img"
             />
             <ExecutiveName>Dr. Deborah Irabor</ExecutiveName>
@@ -98,8 +102,8 @@ export default function About() {
             <Image
               src="https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylazTfdYws9PCJub6mnGgRpjSwhzxIoirDekN5"
               alt="secretary"
-              width={300}
-              height={300}
+              width={280}
+              height={280}
               className="img"
             />
             <ExecutiveName>Mrs. Adesua Penn</ExecutiveName>
@@ -109,8 +113,8 @@ export default function About() {
             <Image
               src="https://y0j76v8ehu.ufs.sh/f/ixPJlD0BR7ylVb6M4pq8Ckl7gdPxpa5TyKHznUiuAr1Oq93t"
               alt="PRO"
-              width={300}
-              height={300}
+              width={280}
+              height={280}
               className="img"
             />
 
@@ -119,6 +123,8 @@ export default function About() {
           </ImageAndTitle>
         </ExecutiveProfile>
       </ExecutiveContainer>
+
+      <Committees />
 
       <Container>
         <BriefHeading>
