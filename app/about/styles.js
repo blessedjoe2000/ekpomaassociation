@@ -19,10 +19,6 @@ export const ExecutiveProfile = styled(Box)`
   justify-content: space-evenly;
   align-items: center;
   gap: 2rem;
-
-  @media (max-width: 768px) {
-    gap: 5px;
-  }
 `;
 export const ImageAndTitle = styled(Box)`
   display: flex;
