@@ -118,7 +118,7 @@ export default function About() {
               className="img"
             />
 
-            <ExecutiveName>Mrs Philomena Ohen</ExecutiveName>
+            <ExecutiveName>Mrs. Philomena Ohen</ExecutiveName>
             <ExecutiveTitle>PRO</ExecutiveTitle>
           </ImageAndTitle>
         </ExecutiveProfile>
