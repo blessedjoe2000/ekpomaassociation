@@ -41,7 +41,7 @@ export default function Gallery() {
                     src={imageDetail.url}
                     alt="photo gallery"
                     className="card-cover"
-                    width={300}
+                    width={400}
                     height={200}
                     sizes="(max-width: 300px) 100vw, 300px"
                   />

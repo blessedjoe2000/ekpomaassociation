@@ -64,10 +64,7 @@ const Committees = () => {
             <Typography sx={{ fontSize: "1.2rem" }}>Prof. C. Odion</Typography>
             <Typography sx={{ marginLeft: 1 }}> - Chairperson</Typography>
           </Box>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography sx={{ fontSize: "1.2rem" }}>Mr. Ariohuodion</Typography>
-            <Typography sx={{ marginLeft: 1 }}> - Member</Typography>
-          </Box>
+
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Typography sx={{ fontSize: "1.2rem" }}>Pst. S. Ainabe</Typography>
             <Typography sx={{ marginLeft: 1 }}> - Member</Typography>
@@ -160,10 +157,6 @@ const Committees = () => {
         </CommitteeDetails>
         <CommitteeDetails>
           <CommitteeHeading>Fundraiser Committee</CommitteeHeading>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography sx={{ fontSize: "1.2rem" }}>Mr. Ariohuodion</Typography>
-            <Typography sx={{ marginLeft: 1 }}> - Chairperson</Typography>
-          </Box>
           <Box sx={{ display: "flex", alignItems: "center" }}>
             <Typography sx={{ fontSize: "1.2rem" }}>Dr. Ohen</Typography>
             <Typography sx={{ marginLeft: 1 }}> - Member</Typography>
